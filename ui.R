@@ -100,7 +100,8 @@ conclusion_tab <- tabPanel(
       width="850", 
       height="400"),
   h3("Summary Takeaways"),
-  p("_____________________"),
+  p("3 specific takeaways from the analysis tying the project back to the intention set out in the introduction. backed up by a piece of evidence, calculated value, table, or chart that demonstrates the pattern/insight.
+Discussion of the most important insight or thing you learned from your analysis. Discussion of the broader implications of this insight."),
 )
 
 
