@@ -43,19 +43,22 @@ interactive_tab_1 <- tabPanel(
 
 
 plot2_sidebar <- sidebarPanel(
-  #selectInput("user_input", "Select Region to Plot", choices = climate_data$country)
+  selectInput("race_input", "Select race to plot", choices = c('White', 'Black', 'Hispanic', 'Asian'))
 )
 
 plot2_main <- mainPanel(
-  #plotlyOutput(outputId = "____")
+  plotlyOutput(outputId = "racesPlot")
 )
 
 interactive_tab_2 <- tabPanel(
-  "Chart 2",
+  "Chart 2: Races",
   sidebarLayout(
     plot2_sidebar,
     plot2_main
-  )
+  ),
+  p("This chart shows the correlation between the racial makeup of schools and the average total SAT score of that school. 
+     In general, schools with greater percent White and Asian have higher SAT scores while schools with greater percent Black and Hispanic
+     have lower SAT scores. This is a problematic trend which highlights injustice in our education systems")
 )
 
 

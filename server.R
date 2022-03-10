@@ -16,4 +16,26 @@ server <- function(input, output) {
     
     return(enrollPlot)
   })
+  
+  output$racesPlot <- renderPlotly({
+    
+    df <- sat_data %>% mutate('Total' = Average.Score..SAT.Math. + Average.Score..SAT.Reading. + Average.Score..SAT.Writing.) %>%
+                        rename('White' = Percent.White, 'Black' = Percent.Black, 'Hispanic' = Percent.Hispanic, 'Asian' = Percent.Asian)
+    
+    df$White <- as.numeric(gsub("%$", "", df$White))
+    df$Black <- as.numeric(gsub("%$", "", df$Black))
+    df$Hispanic <- as.numeric(gsub("%$", "", df$Hispanic))
+    df$Asian <- as.numeric(gsub("%$", "", df$Asian))
+    
+    
+    racePlot <- df %>% ggplot(aes(y = Total)) + 
+      geom_point(aes_string(x = input$race_input)) +
+      labs(title = "Average SAT Scores Vs. Percent Race", x = paste("Percent", input$race_input), y = "Average Total SAT Score") +
+      theme(plot.title = element_text(hjust = 0.5))
+      
+    
+    racePlot <- ggplotly(racePlot)
+    
+    return(racePlot)
+  })
 }
