@@ -2,6 +2,8 @@ library(ggplot2)
 library(plotly)
 library(dplyr)
 
+sat_data <- read.csv("https://raw.githubusercontent.com/info-201b-wi22/final-project-ErikOnsager/main/scores.csv?token=GHSAT0AAAAAABQJHLQQURNL43ANC2TAQAV4YRSKOGQ")
+
 server <- function(input, output) {
   
   output$enrollmentPlot <- renderPlotly({

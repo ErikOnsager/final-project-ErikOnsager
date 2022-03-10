@@ -3,7 +3,7 @@
 
 Authors: Harshita Chandgothia, Emily Estrada, Erik Onsager, Henry Stirrat
 
-Link: Link to your Shiny App here
+Link: https://harshita2611.shinyapps.io/final-project-ErikOnsager/
 
 # Introduction
 Our project analyses a data set that consists of the average SAT scores for New York City public schools during the year 2014 - 2015. We decided on this area of study because the data set provides many columns that allow us to analyse the information with a range of data creating important questions. Our group has seen that history has shown us how rigged such standardised systems can be, with celebrities buying scores for their children and students paying fake test takers to forge higher scores. In order to understand the corruption and dispersion in test scores, we are motivated to analyse the sociodemographic factors that affect this and bring light to the issue and challenges students face. The original data comes from two different places. The high school data was collected by the New York City Department of Education. The SAT data was provided by the College Board. The original data comes from https://www.kaggle.com/nycopendata/high-schools.
@@ -18,4 +18,13 @@ In order to answer these questions, we will evaluate multiple forms of values su
 
 
 # Conclusion / Summary Takeaways
+
+Our data analysis has led us to be able to answer the questions we were seeking to answer at the start. Our group wanted to bring light to the issues and look deeper at the standardized testing system. 
+
+Throughout our graphs, we were able to first see how student enrollment and average SAT scores would compare. Our group split up the data in order to see each part of the SAT scores such as math, English, reading, and overall scores.  We were able to determine how most student enrollment falls between 200 and 700 and the average total SAT scores ranged from about 1000 to 1400. The main takeaway from our first chart was the overall SAT score compared to student enrollment which showed that generally as enrollment increases, SAT scores do as well. This could indicate how schools with a bigger population are able to provide more help to students which helps us answer our fourth question that we sought out. 
+
+Our second takeaway would be race compared to SAT scores and the correlation between the two. Our second chart was able to show how in general, schools with greater percent White and Asian have higher SAT scores while schools with greater percent Black and Hispanic have lower SAT scores.  This chart is important to our insight since it can indicate the importance of location and race. Hispanic and Black students may not be receiving the same resources and this trend highlights the injustice in our education systems for these students. This helps us understand our first and third question better since we can see the difference between races.
+Lastly, we viewed how race and demographic affects percentage tested. This can be seen through our last graph and some of our second graph. This is important for our first question and second question since we see the divide between race and demographics. This can cause students to not have resources available to take the test which we see that the number indicates this through the graph.
+
+We were able to answer all of the questions we sought out to however, our data only tracks students from New York. The trends we observe may not fully represent the issues with current standardized testing practices. Our data also only spans one year, which means it is more likely that anomalies could affect our analysis. Another issue is that our dataset does not report factors like household income and level of education of the students’ parents, which are factors likely to affect performance on standardized tests. Furthermore, the race breakdowns listed are based on the whole student body of the school, not just those who were tested. Therefore, it is possible that in schools with lower testing rates, the students who were tested are not representative of the overall demographics of the school. We recognize these limitations throughout our analysis however, we have created insight and provided a better understanding of how students in NYC perform on the SAT to hopefully bring forth changes.
 
