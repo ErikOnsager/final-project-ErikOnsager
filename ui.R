@@ -38,7 +38,9 @@ interactive_tab_1 <- tabPanel(
   ),
   p("This chart was included to explore how student enrollment and average SAT score of a school are connected. It shows that generally as enrollment increases, SAT scores do as well.
      Some other insights from the chart are: Reading and Writing scores tend to be very similar to each other, while Math has a weaker correlation to the others. Finally, most student enrollment falls between
-     200 and 700, with most average total SAT scores ranging from 1000 to 1400.")
+     200 and 700, with most average total SAT scores ranging from 1000 to 1400. An important consideration is that student enrollment is also
+    dependent on the type of school and location of the school. This means that demographics plays an indirect role in the graph, and indicates
+    that different cities would be providing different variabilities of ease of access to school.")
 )
 
 
@@ -57,25 +59,33 @@ interactive_tab_2 <- tabPanel(
     plot2_main
   ),
   p("This chart shows the correlation between the racial makeup of schools and the average total SAT score of that school. 
-     In general, schools with greater percent White and Asian have higher SAT scores while schools with greater percent Black and Hispanic
-     have lower SAT scores. This is a problematic trend which highlights injustice in our education systems")
+     In general, schools with a greater percentage of Whites and Asians have higher SAT scores while schools with a greater percentage of Black and Hispanic groups
+     have lower SAT scores. This is a problematic trend which highlights the injustice in our education systems. It represents
+    the need for schools to be eradicating such discrimination as it can hold long lasting impressions in the minds of such young children.")
 )
 
 
 plot3_sidebar <- sidebarPanel(
-  #selectInput("user_input", "Select Region to Plot", choices = climate_data$country)
+  selectInput("city_input", "Select City to Plot", choices = sat_data$City, selected = 'Manhattan', multiple = TRUE)
 )
 
 plot3_main <- mainPanel(
-  #plotlyOutput(outputId = "____")
+  plotlyOutput(outputId = "testedPlot")
 )
 
 interactive_tab_3 <- tabPanel(
-  "Chart 3",
+  "Chart 3: Percent Tested",
   sidebarLayout(
     plot3_sidebar,
     plot3_main
-  )
+  ),
+  br(),
+  p("The graph above is a scatterchart of the average score vs percentage of students tested for the SAT in a city of
+    the user's choice. The widget on the left allows the user to choose a specific city of interest, thus making
+    the app interactive. Through the graph, a pattern is noticeable where densely populated cities (eg. Manhattan,
+    Brooklyn) have higher average scores. This could also be attributed to the fact that there are more test takers
+    in such locations, due to the higher level of access. In comparison, places such as Jamaica or Saint Albans have
+    much lower data points visible.")
 )
 
 
